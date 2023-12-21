@@ -1,5 +1,5 @@
 const mainController = {
-  get() {
+  get(req, res) {
 
   },
 };
