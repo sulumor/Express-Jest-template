@@ -10,6 +10,10 @@ Linter : ESLINT sous AIRBnB + utilisation de double quotes
 
 ## Commencer
 
+### Mise en place
+
+Depuis le répositorie, NE PAS le cloner mais plutôt sélectionner "Use this template" en haut à droite. 
+
 ### Installation
 ```bash
   npm install
