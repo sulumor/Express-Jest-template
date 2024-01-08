@@ -2,6 +2,9 @@ import { Router } from "express";
 import mainController from "../controllers/index.controller.js";
 import controllerWrapper from "../helpers/controler.wrapper.js";
 
+// * Ligne suivante a décommenter si utilisation de Joi validate('dataProp', schema)
+// import validateMiddleware from "../validations/validate.middleware.js";
+
 const router = Router();
 
 /**

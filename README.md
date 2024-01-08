@@ -4,9 +4,11 @@ Avec tests JEST et SUPERTEST
 
 ## Description
 
-Architecture afin de commencer tous projet de serveur avec Express en ESM.   
-Mise en place des fichiers de tests pour JEST et SURPERTEST.  
-Linter : ESLINT sous AIRBnB + utilisation de double quotes
+Architecture afin de commencer tous projet de serveur en ESM.   
+Infrastructure App : Express,
+Linter : ESLINT sous AIRBnB + utilisation de double quotes,
+Test : JEST et SUPERTEST,
+Validation de données : JOI,
 
 ## Commencer
 
