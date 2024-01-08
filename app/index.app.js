@@ -1,6 +1,7 @@
 import express from "express";
 import router from "./routers/index.router.js";
 import errorHandler from "./helpers/error.handler.js";
+import createDoc from "./helpers/swagger.doc.js";
 
 const app = express();
 
@@ -10,6 +11,7 @@ const app = express();
 //   logger.http(`${req.ip} ${req.url}`, { httpStatus: 200 });
 //   next();
 // });
+createDoc(app);
 
 app.use(express.json());
 app.use(router);

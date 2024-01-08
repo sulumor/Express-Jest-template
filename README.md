@@ -8,7 +8,8 @@ Infrastructure App : Express,
 Linter : ESLINT sous AIRBnB + utilisation de double quotes,  
 Test : JEST et SUPERTEST,  
 Validation de données : JOI,  
-Logger: WINSTON et WINSTON DAILY ROTATE FILE  
+Logger: WINSTON et WINSTON DAILY ROTATE FILE,  
+Doc API : SWAGGER  
 
 ## Commencer
 
