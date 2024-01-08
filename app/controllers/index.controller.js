@@ -1,10 +1,11 @@
+import ApiError from "../errors/api.error.js";
+
 const mainController = {
+  notFound(_, __, next) {
+    next(new ApiError("Ressource not found", { httpStatus: 404 }));
+  },
   get(req, res) {
-    try {
-      res.json();
-    } catch (error) {
-      console.error(error);
-    }
+    res.json();
   },
 };
 

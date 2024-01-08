@@ -9,7 +9,7 @@
     "dev": "npx nodemon",
     "start": "node ."
   },
-  "keywords": [],
+  "keywords": ["template", "Express", "Jest", "supertest",  "server"],
   "author": "Romuald Patfoort",
   "license": "ISC",
   "devDependencies": {
