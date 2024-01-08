@@ -23,13 +23,18 @@ Ne pas oublier de créer un fichier .env à la racine du projet (cf. .env.exampl
 
 ## Aide
 
-Cross env est mis en place afin de faciliter la lecture des environnement NODE dans le script (nécessaire pour les utilisateurs Windows).  
-Si vous utiliser Mac ou Linux, vous pouvez le retirer des dépendances de dev et modifier le script test comme cela:
+Si vous êtes utilisateur de Windows, vous devez installer CROSS ENV
 ```bash
-  "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
+  npm install --save-dev cross-env
+```
+Il permet de faciliter la lecture des environnement NODE dans le script.
+
+Vous devez ensuite modifier le script test comme cela:
+```bash
+  "test": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest",
 ```
 
-## Authors
+## Author
 
 Romuald Patfoort alias Sulumor
 

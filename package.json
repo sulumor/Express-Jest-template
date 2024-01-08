@@ -5,15 +5,20 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest",
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
     "dev": "npx nodemon",
     "start": "node ."
   },
-  "keywords": ["template", "Express", "Jest", "supertest",  "server"],
+  "keywords": [
+    "template",
+    "Express",
+    "Jest",
+    "supertest",
+    "server"
+  ],
   "author": "Romuald Patfoort",
   "license": "ISC",
   "devDependencies": {
-    "cross-env": "^7.0.3",
     "eslint": "^8.56.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.29.1",
