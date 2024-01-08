@@ -14,7 +14,9 @@
     "Express",
     "Jest",
     "supertest",
-    "server"
+    "server",
+    "Joi",
+    "ESLint", "Winston"
   ],
   "author": "Romuald Patfoort",
   "license": "ISC",
@@ -29,6 +31,8 @@
   "dependencies": {
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "joi": "^17.11.0"
+    "joi": "^17.11.0",
+    "winston": "^3.11.0",
+    "winston-daily-rotate-file": "^4.7.1"
   }
 }

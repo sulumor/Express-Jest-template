@@ -1,20 +1,20 @@
 # Template Serveur Node avec Express
 
-Avec tests JEST et SUPERTEST
+Architecture afin de commencer tous projet de serveur en ESM.
 
 ## Description
 
-Architecture afin de commencer tous projet de serveur en ESM.   
-Infrastructure App : Express,
-Linter : ESLINT sous AIRBnB + utilisation de double quotes,
-Test : JEST et SUPERTEST,
-Validation de données : JOI,
+Infrastructure App : Express,  
+Linter : ESLINT sous AIRBnB + utilisation de double quotes,  
+Test : JEST et SUPERTEST,  
+Validation de données : JOI,  
+Logger: WINSTON et WINSTON DAILY ROTATE FILE  
 
 ## Commencer
 
 ### Mise en place
 
-Depuis le répositorie, NE PAS le cloner mais plutôt sélectionner "Use this template" en haut à droite. 
+Depuis le répository, NE PAS le cloner mais plutôt sélectionner "Use this template" en haut à droite. 
 
 ### Installation
 ```bash
