@@ -7,8 +7,10 @@ export default class ApiError extends Error {
   constructor(message, infos) {
     super(message);
     this.name = "Api error";
-    Object.entries(infos).forEach(([key, value]) => {
-      this[key] = value;
-    });
+    this.httpStatus = infos.httpStatus || 500;
+    // * A décommenter pour ajouter plus de paramètres
+    // Object.entries(infos).forEach(([key, value]) => {
+    //   this[key] = value;
+    // });
   }
 }
