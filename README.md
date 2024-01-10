@@ -6,6 +6,7 @@ Architecture afin de commencer tous projet de serveur en ESM.
 
 Infrastructure App : Express,  
 Linter : ESLINT sous AIRBnB + utilisation de double quotes,  
+BDD : POSTGRESQL avec PG,    
 Test : JEST et SUPERTEST,  
 Validation de données : JOI,  
 Logger: WINSTON et WINSTON DAILY ROTATE FILE,  
@@ -37,7 +38,7 @@ Vous devez ensuite modifier le script test comme cela:
   "test": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest",
 ```
 
-## Author
+## Authors
 
-Romuald Patfoort alias Sulumor
+Romuald Patfoort alias Sulumor avec l'aide de Thomas Trehou-Lavediot
 
