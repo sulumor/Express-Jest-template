@@ -11,6 +11,12 @@ const app = express();
 //   logger.http(`${req.ip} ${req.url}`, { httpStatus: 200 });
 //   next();
 // });
+
+app.set("view engine", "ejs");
+app.set("views", "./views");
+
+app.use("/static", express.static("../public"));
+
 createDoc(app);
 
 app.use(express.json());
