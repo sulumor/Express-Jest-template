@@ -10,7 +10,8 @@ BDD : POSTGRESQL avec PG,
 Test : JEST et SUPERTEST,  
 Validation de données : JOI,  
 Logger: WINSTON et WINSTON DAILY ROTATE FILE,  
-Doc API : SWAGGER  
+Doc API : SWAGGER 
+Template de vue: EJS 
 
 ## Commencer
 
