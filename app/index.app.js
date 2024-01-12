@@ -1,4 +1,5 @@
 import express from "express";
+import path from "node:path";
 import router from "./routers/index.router.js";
 import errorMiddleware from "./middlewares/error.middleware.js";
 import createDoc from "./helpers/swagger.doc.js";
@@ -13,7 +14,7 @@ const app = express();
 // });
 
 app.set("view engine", "ejs");
-app.set("views", "./views");
+app.set("views", path.resolve("app/views"));
 
 app.use("/static", express.static("../public"));
 
