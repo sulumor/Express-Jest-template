@@ -8,7 +8,7 @@ const websiteRouter = express.Router();
 websiteRouter.route("/").get(controllerWrapper(controller.homePage));
 
 websiteRouter.use((_, __, next) => {
-  next(new WebsiteError("Page note Found", { httpStatus: 404 }));
+  next(new WebsiteError("Page not Found", { httpStatus: 404 }));
 });
 
 export default websiteRouter;

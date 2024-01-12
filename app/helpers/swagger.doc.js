@@ -19,9 +19,9 @@ const options = {
   // Expose OpenAPI UI
   exposeSwaggerUI: true,
   // Expose Open API JSON Docs documentation in `apiDocsPath` path.
-  exposeApiDocs: true,
+  exposeApiDocs: false,
   // Open API JSON Docs endpoint.
-  apiDocsPath: "/",
+  apiDocsPath: "/api-docs/json",
   // Set non-required fields as nullable by default
   notRequiredAsNullable: false,
   // You can customize your UI options.

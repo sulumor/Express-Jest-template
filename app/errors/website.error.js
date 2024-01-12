@@ -8,7 +8,7 @@ export default class WebsiteError extends Error {
     super(message);
     this.name = "WebsiteError";
     this.format = "html";
-    this.httpsStatus = info.httpsStatus || 500;
+    this.httpStatus = info.httpStatus || 500;
     // * A décommenter pour ajouter plus de paramètres
     // Object.entries(infos).forEach(([key, value]) => {
     //   this[key] = value;
