@@ -1,5 +1,5 @@
 /**
- * @typedef {object} ApiJsonErro - Error response
+ * @typedef {object} ApiJsonError - Error response
  * @property {string} error.required - Error message
  * @example
  * {

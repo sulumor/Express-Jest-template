@@ -26,8 +26,8 @@ apiRouter.route("/")
    * @tags ...
    * @oaram {} request.body.reauired - ... info
    * @return {} 200 - Success response - application/json
-   * @return {ApiJsonError} 400 - Bad request response - application/json
-   * @return {ApiJsonError} 500 - Internal Server Error - application/json
+   * @return { ApiJsonError } 400 - Bad request response - application/json
+   * @return { ApiJsonError } 500 - Internal Server Error - application/json
    */
   .post(controllerWrapper(CoreController.create.bind(CoreController)));
 

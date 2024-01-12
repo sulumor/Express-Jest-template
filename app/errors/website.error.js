@@ -1,3 +1,12 @@
+/**
+ * @typedef {object} WebsiteJsonError - Error response
+ * @property {string} error.required - Error message
+ * @example
+ * {
+ *  "error": "Bad request"
+ * }
+ */
+
 export default class WebsiteError extends Error {
   /**
    * Personnalizes Error Constructor to personnalized user response

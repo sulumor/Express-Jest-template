@@ -3,7 +3,7 @@ export default class CoreController {
 
   static async getAll(_, res) {
     const rows = await this.datamapper.findAll();
-    res.status(200).json(rows);
+    return res.status(200).json(rows);
   }
 
   static async getByPk({ params }, res, next) {

@@ -5,6 +5,15 @@ import controller from "../../controllers/website.controller.js";
 
 const websiteRouter = express.Router();
 
+/**
+   * GET /
+   * @summary Homepage
+   * @tags ...
+   * @oaram {} request.body.reauired - ... info
+   * @return {} 200 - Success response - application/json
+   * @return {ApiJsonError} 400 - Bad request response - application/json
+   * @return {ApiJsonError} 500 - Internal Server Error - application/json
+   */
 websiteRouter.route("/").get(controllerWrapper(controller.homePage));
 
 websiteRouter.use((_, __, next) => {
