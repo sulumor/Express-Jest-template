@@ -3,8 +3,32 @@ import client from "../helpers/pg.client.js";
 export default class CoreDatamapper {
   static tableName;
 
-  static async findAll() {
-    const result = await client.query(`SELECT * FROM "${this.tableName}"`);
+  static async findAll(params) {
+    let filter = "";
+    const values = [];
+
+    if (params?.where) {
+      const filters = [];
+      let indexPlaceholder = 1;
+
+      Object.entries(params.where).forEach(([param, value]) => {
+        if (param === "or") {
+          const filtersOr = [];
+          Object.entries(value).forEach(([key, val]) => {
+            filtersOr.push(`"${key}" = $${indexPlaceholder}`);
+            values.push(val);
+            indexPlaceholder += 1;
+          });
+          filters.push(`(${filtersOr.join(" OR ")})`);
+        } else {
+          filters.push(`"${param}" = $${indexPlaceholder}`);
+          values.push(value);
+          indexPlaceholder += 1;
+        }
+      });
+      filter = `WHERE ${filters.join(" AND ")}`;
+    }
+    const result = await client.query(`SELECT * FROM "${this.tableName}" ${filter}`, [values]);
     return result.rows;
   }
 
