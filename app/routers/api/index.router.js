@@ -24,7 +24,7 @@ apiRouter.route("/")
    * POST /api/
    * @summary Add a ...
    * @tags ...
-   * @oaram {} request.body.reauired - ... info
+   * @oaram {} request.body.required - ... info
    * @return {} 200 - Success response - application/json
    * @return { ApiJsonError } 400 - Bad request response - application/json
    * @return { ApiJsonError } 500 - Internal Server Error - application/json
@@ -36,7 +36,7 @@ apiRouter.route("/:id(\\d+)")
  * GET /api/{id}
  * @summary Get a ... from its id
  * @tags ...
- * @param { number } id.path.reauired - ... id
+ * @param { number } id.path.required - ... id
  * @return {} 200 - Success response - application/json
  * @return { ApiJsonError } 400 - Bad request response - application/json
  * @return { ApiJsonError } 404 - Not found response - application/json
@@ -48,8 +48,8 @@ apiRouter.route("/:id(\\d+)")
  * PATCH /api/{id}
  * @summary Update a ...
  * @tags ...
- * @param { number } id.path.reauired - ... id
- * @oaram {} request.body.reauired - ... info
+ * @param { number } id.path.required - ... id
+ * @oaram {} request.body.required - ... info
  * @return {} 200 - Success response - application/json
  * @return { ApiJsonError } 400 - Bad request response - application/json
  * @return { ApiJsonError } 404 - Not found response - application/json
@@ -61,7 +61,7 @@ apiRouter.route("/:id(\\d+)")
  * DELETE /api/{id}
  * @summary Deleye a ...
  * @tags ...
- * @param { number } id.path.reauired - ... id
+ * @param { number } id.path.required - ... id
  * @return {} 204 - Success response
  * @return { ApiJsonError } 400 - Bad request response - application/json
  * @return { ApiJsonError } 404 - Not found response - application/json
