@@ -1,6 +1,5 @@
 import Joi from "joi";
-
-const frAlphaNum = /^[a-zA-ZÀ-ÿ0-9-]+$/;
+import { frAlphaNum } from "../regex.schema.js";
 
 export default Joi.object({
   name: Joi.string().pattern(frAlphaNum),
