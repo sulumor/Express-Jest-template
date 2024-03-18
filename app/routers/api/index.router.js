@@ -9,6 +9,44 @@ import CoreController from "../../controllers/core.controller.js";
 
 const apiRouter = Router();
 
+apiRouter.route("/:id(\\d+)")
+/**
+ * GET /api/{id}
+ * @summary Get a ... from its id
+ * @tags ...
+ * @param { number } id.path.required - ... id
+ * @return {} 200 - Success response - application/json
+ * @return { ApiJsonError } 400 - Bad request response - application/json
+ * @return { ApiJsonError } 404 - Not found response - application/json
+ * @return { ApiJsonError } 500 - Internal Server Error response - application/json
+*/
+  .get(controllerWrapper(CoreController.getByPk.bind(CoreController)))
+
+/**
+ * PATCH /api/{id}
+ * @summary Update a ...
+ * @tags ...
+ * @param { number } id.path.required - ... id
+ * @param {} request.body.reauired - ... info
+ * @return {} 200 - Success response - application/json
+ * @return { ApiJsonError } 400 - Bad request response - application/json
+ * @return { ApiJsonError } 404 - Not found response - application/json
+ * @return { ApiJsonError } 500 - Internal Server Error response - application/json
+*/
+  .patch(controllerWrapper(CoreController.update.bind(CoreController)))
+
+/**
+ * DELETE /api/{id}
+ * @summary Delete a ...
+ * @tags ...
+ * @param { number } id.path.required - ... id
+ * @return { object } 204 - Success response
+ * @return { ApiJsonError } 400 - Bad request response - application/json
+ * @return { ApiJsonError } 404 - Not found response - application/json
+ * @return { ApiJsonError } 500 - Internal Server Error response - application/json
+*/
+  .delete(controllerWrapper(CoreController.delete.bind(CoreController)));
+
 apiRouter.route("/")
 /**
  * GET /api/
@@ -24,50 +62,12 @@ apiRouter.route("/")
    * POST /api/
    * @summary Add a ...
    * @tags ...
-   * @oaram {} request.body.reauired - ... info
+   * @param {} request.body.required - ... info
    * @return {} 200 - Success response - application/json
    * @return { ApiJsonError } 400 - Bad request response - application/json
    * @return { ApiJsonError } 500 - Internal Server Error - application/json
    */
   .post(controllerWrapper(CoreController.create.bind(CoreController)));
-
-apiRouter.route("/:id(\\d+)")
-/**
- * GET /api/{id}
- * @summary Get a ... from its id
- * @tags ...
- * @param { number } id.path.reauired - ... id
- * @return {} 200 - Success response - application/json
- * @return { ApiJsonError } 400 - Bad request response - application/json
- * @return { ApiJsonError } 404 - Not found response - application/json
- * @return { ApiJsonError } 500 - Internal Server Error response - application/json
- */
-  .get(controllerWrapper(CoreController.getByPk.bind(CoreController)))
-
-/**
- * PATCH /api/{id}
- * @summary Update a ...
- * @tags ...
- * @param { number } id.path.reauired - ... id
- * @oaram {} request.body.reauired - ... info
- * @return {} 200 - Success response - application/json
- * @return { ApiJsonError } 400 - Bad request response - application/json
- * @return { ApiJsonError } 404 - Not found response - application/json
- * @return { ApiJsonError } 500 - Internal Server Error response - application/json
- */
-  .patch(controllerWrapper(CoreController.update.bind(CoreController)))
-
-  /**
- * DELETE /api/{id}
- * @summary Deleye a ...
- * @tags ...
- * @param { number } id.path.reauired - ... id
- * @return {} 204 - Success response
- * @return { ApiJsonError } 400 - Bad request response - application/json
- * @return { ApiJsonError } 404 - Not found response - application/json
- * @return { ApiJsonError } 500 - Internal Server Error response - application/json
- */
-  .delete(controllerWrapper(CoreController.delete.bind(CoreController)));
 
 apiRouter.use((_, __, next) => next(new ApiError("Ressource not found", { httpStatus: 404 })));
 
