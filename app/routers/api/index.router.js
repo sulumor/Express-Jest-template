@@ -15,6 +15,7 @@ apiRouter.route("/:id(\\d+)")
  * @summary Get a ... from its id
  * @tags ...
  * @param { number } id.path.required - ... id
+ * @param { number } id.path.required - ... id
  * @return {} 200 - Success response - application/json
  * @return { ApiJsonError } 400 - Bad request response - application/json
  * @return { ApiJsonError } 404 - Not found response - application/json
@@ -27,7 +28,7 @@ apiRouter.route("/:id(\\d+)")
  * @summary Update a ...
  * @tags ...
  * @param { number } id.path.required - ... id
- * @param {} request.body.reauired - ... info
+ * @param {} request.body.required - ... info
  * @return {} 200 - Success response - application/json
  * @return { ApiJsonError } 400 - Bad request response - application/json
  * @return { ApiJsonError } 404 - Not found response - application/json
