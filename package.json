@@ -23,7 +23,9 @@
     "EJS",
     "CORS",
     "Helmet",
-    "Limiter"
+    "Limiter",
+    "JWT", 
+    "Bcrypt"
   ],
   "author": "Romuald Patfoort",
   "license": "ISC",

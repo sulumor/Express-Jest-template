@@ -1,45 +1,47 @@
-# Template Serveur Node avec Express
+# Template Serveur Node with Express
 
-Architecture afin de commencer tous projet de serveur en ESM.
+Architecture to start any server project in ESM with Express.
 
 ## Description
 
-Infrastructure App : Express,  
+App Infrastructure : Express,  
 Linter : ESLINT sous AIRBnB + utilisation de double quotes,  
 BDD : POSTGRESQL avec PG,    
-Test : JEST et SUPERTEST,  
-Validation de données : JOI,  
+Tester : JEST et SUPERTEST,  
+Datas validator : JOI,  
 Logger: WINSTON et WINSTON DAILY ROTATE FILE,  
-Doc API : SWAGGER   
-Template de vue: EJS 
+Security: CORS, HELMET, JWT, BCRYPT, EXPRESS-RATE-LIMIT,   
+API doc : SWAGGER,    
+Check commits: HUSKY,   
+Template views: EJS 
 
-## Commencer
+## Begin
 
-### Mise en place
+### Setting up
 
-Depuis le répository, NE PAS le cloner mais plutôt sélectionner "Use this template" en haut à droite. 
+From the repository, DO NOT clone it but rather select "Use this template" at the top right. 
 
 ### Installation
 ```bash
   npm install
 ```
-Ne pas oublier de créer un fichier .env à la racine du projet (cf. .env.example)
+Do not forget to create a file . env at the root of the project (cf. .env.example)
 
 
-## Aide
+## Help
 
-Si vous êtes utilisateur de Windows, vous devez installer CROSS ENV
+If you are a Windows user, you must install CROSS ENV
 ```bash
   npm install --save-dev cross-env
 ```
-Il permet de faciliter la lecture des environnement NODE dans le script.
+It facilitates the reading of the NODE environment in the script.
 
-Vous devez ensuite modifier le script test comme cela:
+You must then edit the test script like this:
 ```bash
   "test": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest",
 ```
 
 ## Authors
 
-Romuald Patfoort alias Sulumor avec l'aide de Thomas Trehou-Lavediot
+Romuald Patfoort alias Sulumor with help of Thomas Trehou-Lavediot
 
